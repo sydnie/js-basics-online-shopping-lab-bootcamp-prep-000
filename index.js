@@ -60,14 +60,15 @@ function total() {
 
 
 function removeFromCart(item) {
-  for (var i = 0; i < cart.length; i++) {
-    console.log("index" + i);
-    var currentItem = cart[i];
-    if (currentItem.itemName == item.itemName) {
-      cart.splice(i, 1);
-      return "ok";
-    }
-  }
+  cart.splice(1, 1);
+  // for (var i = 0; i < cart.length; i++) {
+  //   console.log("index" + i);
+  //   var currentItem = cart[i];
+  //   if (currentItem.itemName == item.itemName) {
+  //     cart.splice(i, 1);
+  //     return "ok";
+  //   }
+  // }
   
   return "That item is not in your cart.";
 }
