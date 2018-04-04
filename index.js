@@ -60,16 +60,13 @@ function total() {
 
 
 function removeFromCart(item) {
-  // cart.splice(1, 1);
   for (var i = 0; i < cart.length; i++) {
-    cart.splice(1, 1);
-    return "";
-    // console.log("index" + i);
-    // var currentItem = cart[i];
-    // if (currentItem.itemName == item.itemName) {
-    //   cart.splice(i, 1);
-    //   return "ok";
-    // }
+
+    var currentItem = cart[i];
+    if (currentItem.itemName == item) {
+      cart.splice(i, 1);
+      return "ok";
+    }
   }
   
   return "That item is not in your cart.";
